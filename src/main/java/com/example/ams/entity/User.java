@@ -22,7 +22,7 @@ public class User implements UserDetails {
     private Long id;
 
     @Column(name = "login", unique = true, nullable = false)
-    private String login;
+    private String username;
 
     @Column(name = "password", unique = true, nullable = false)
     private String password;
@@ -42,10 +42,10 @@ public class User implements UserDetails {
         return password;
     }
 
-    @Override
-    public String getUsername() {
-        return login;
-    }
+//    @Override
+//    public String getUsername() {
+//        return username;
+//    }
 
     @Override
     public boolean isAccountNonExpired() {
